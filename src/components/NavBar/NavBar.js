@@ -1,7 +1,13 @@
+import React, { useState } from 'react';
 import classes from './NavBar.module.css';
 import { Link } from 'react-router-dom';
+import Dropdown from '../Dropdown/Dropdown';
 
 function NavBar() {
+
+    //to display the dropdown component when hovered over Profile 
+    const [ display, setDisplay ] = useState(false);
+
     return (
         <header className={classes.header}>
             <div className={classes.logo}>Logo</div>
@@ -22,8 +28,8 @@ function NavBar() {
                 </li>
                 </div>
                 <div className={classes.creds}>
-                <li>
-                    <Link to=''>Profile</Link>
+                <li onClick={() => setDisplay(!display)}>
+                    <Link>Profile</Link>
                 </li>
                 <li>
                     <Link to=''>Wishlist</Link>
@@ -33,6 +39,9 @@ function NavBar() {
                 </li>
                 </div>
                 </ul>
+                {display && (
+                    <Dropdown />
+                    )}
             </nav>
         </header>
     );

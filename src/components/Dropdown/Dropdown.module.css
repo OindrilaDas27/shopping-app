@@ -1,0 +1,47 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16rem 0 0 -20rem;
+    padding: 0 1rem 1rem;
+    /* font-size: 0.9rem; */
+    background-color: #ffffff;
+}
+
+.dropdown h4{
+    margin-bottom: 0;
+}
+
+.dropdown p {
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+.dropdown ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 -3rem;
+    /* font-size: 0.8rem; */
+}
+
+.dropdown li{
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+}
+
+.dropdown a{
+    color: black;
+}
+
+.dropdown a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.dropdown button {
+    padding: 0.5rem;
+    background-color: #e24c85;
+    border-color: transparent;
+    font-size: 0.9rem;
+}
+
