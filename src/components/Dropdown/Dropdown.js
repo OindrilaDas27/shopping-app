@@ -12,7 +12,7 @@ function Dropdown() {
             <p>To access account and manage orders</p>
             <ul>
                 <li>
-                    <button><Link to=''>SignUp/LogIn</Link></button>
+                    <button><Link to='/signup'>SignUp/LogIn</Link></button>
                 </li>
                 <li>
                     <Link to=''>Orders</Link>
