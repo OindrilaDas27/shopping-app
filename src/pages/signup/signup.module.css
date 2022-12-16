@@ -35,6 +35,21 @@
     border-color: transparent;
 }
 
+.signUpsocials{
+    padding: 0.5rem 0 0 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem 0 0 0;
+}
+
+.socials a {
+    padding: 0 0.5rem;
+}
+
 .login {
     padding: 1rem;
 }
@@ -43,4 +58,17 @@
     text-decoration: none;
     padding: 0 0.5rem;
     color: #da4784;
+}
+
+.socials svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.facebook svg {
+    color: #3b5998;
+}
+
+.twitter svg {
+    color: #1DA1F2;
 }
