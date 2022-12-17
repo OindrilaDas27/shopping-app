@@ -9,9 +9,10 @@ import { ImFacebook2 } from "react-icons/im";
 import { FaTwitter } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 
+import RegisterCard from "../../components/Cards/signUp-LogInCard";
 import classes from "./signup.module.css";
 
-function SignUP() {
+function SignUP(props) {
   
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -39,14 +40,14 @@ const signInWithGoogle = () => {
   return (
     <div>
       <div className={classes.signUP}>
-        <div className={classes.signUpForm}>
+        <RegisterCard>
           <h2>SIGN UP</h2>
           <div className={classes.userInfo}>
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="email" onChange={(event) => {setRegisterEmail(event.target.value);}}/>
             <input type="password" placeholder="password" onChange={(event) => {setRegisterPassword(event.target.value);}}/>
             <div className={classes.btn}>
-              <input type="submit" value="SignUp" onClick={signInWithEmail}/>
+              <input type="submit" value="Sign Up" onClick={signInWithEmail}/>
             </div>
             <div className={classes.signUpsocials}>
               Or Sign Up with
@@ -67,10 +68,10 @@ const signInWithGoogle = () => {
             </div>
             <div className={classes.login}>
               Already a member?
-              <Link to="">Login</Link>
+              <Link to="/login">Login</Link>
             </div>
           </div>
-        </div>
+        </RegisterCard>
       </div>
     </div>
   );
