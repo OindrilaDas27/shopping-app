@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { signInWithGoogle } from '../../context/authContext';
+
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../../config/firebase-config";
+
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 import { FaTwitter } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
+
 import classes from "./signup.module.css";
 
 function SignUP() {
+  
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
 
+  const provider = new GoogleAuthProvider();
+
+  //To sign-in with Email and Password
+const signInWithEmail = () => {
+  createUserWithEmailAndPassword(auth, registerEmail, registerPassword).then((result) => {
+      console.log(result);
+  }).catch((error) => {
+      console.log(error);
+  })
+}
+
+//To sign-In with Google
+const signInWithGoogle = () => {
+  signInWithPopup(auth, provider).then((result) => {
+      console.log(result);
+  }).catch((error) => {
+      console.log(error);
+  })
+}
 
   return (
     <div>
@@ -16,11 +42,11 @@ function SignUP() {
         <div className={classes.signUpForm}>
           <h2>SIGN UP</h2>
           <div className={classes.userInfo}>
-            <input type="text" placeholder="Name"></input>
-            <input type="text" placeholder="email"></input>
-            <input type="password" placeholder="password"></input>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="email" onChange={(event) => {setRegisterEmail(event.target.value);}}/>
+            <input type="password" placeholder="password" onChange={(event) => {setRegisterPassword(event.target.value);}}/>
             <div className={classes.btn}>
-              <input type="submit" value="Login"></input>
+              <input type="submit" value="SignUp" onClick={signInWithEmail}/>
             </div>
             <div className={classes.signUpsocials}>
               Or Sign Up with
