@@ -22,7 +22,7 @@ function LogIn() {
                     <input type="submit" value="Log In"/>
                     </div>
                     <div className={classes.logInsocials}>
-                    Or Sign Up with
+                    Or Log In with
                     <div className={classes.socials}>
                         <Link>
                         <FcGoogle />
