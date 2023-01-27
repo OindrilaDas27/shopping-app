@@ -15,16 +15,16 @@ function NavBar() {
                 <ul>
                     <div className={classes.items}>
                 <li>
-                    <Link to=''>Item 1</Link>
+                    <Link to=''>WOMEN</Link>
                 </li>
                 <li>
-                    <Link to=''>Item 2</Link>
+                    <Link to=''>MEN</Link>
                 </li>
                 <li>
-                    <Link to=''>Item 3</Link>
+                    <Link to=''>KIDS</Link>
                 </li>
                 <li>
-                    <Link to=''>Item 4</Link>
+                    <Link to=''>HOME DECOR</Link>
                 </li>
                 </div>
                 <div className={classes.creds}>

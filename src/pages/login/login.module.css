@@ -1,4 +1,4 @@
-.signUP {
+.logIn {
     display: flex;
     justify-content: center;
     padding: 5rem;
@@ -25,7 +25,7 @@
     border-color: transparent;
 }
 
-.signUpsocials{
+.logInsocials{
     padding: 0.5rem 0 0 0;
 }
 

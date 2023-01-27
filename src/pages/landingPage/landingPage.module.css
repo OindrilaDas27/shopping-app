@@ -1,0 +1,26 @@
+.landingPage{
+    position: absolute;
+    z-index: -1;
+}
+
+.firstSection {
+    height: 27rem;
+    width: 100vw;
+    padding: 0%;
+    margin:1rem 0 0 0;
+    max-width: 100%;
+    display: block;
+    /* overflow: hidden;
+    z-index: -1; */
+}
+
+.sectionHeading {
+    margin: 3rem 0 1rem 40%;
+    font-size: 2rem;
+}
+
+.secondSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
